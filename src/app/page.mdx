@@ -1,0 +1,39 @@
+import { Button } from '@/components/Button'
+import { HeroPattern } from '@/components/HeroPattern'
+import { NextSteps } from '@/components/NextSteps'
+
+export const metadata = {
+  title: 'DeployPlex Documentation',
+  description:
+    'Learn everything there is to know about DeployPlex.',
+}
+
+export const sections = [
+  { title: 'Before you begin', id: 'before-you-begin' },
+    { title: 'Next steps', id: 'next-steps' },
+]
+
+<HeroPattern />
+
+# DeployPlex Documentation
+DeployPlex provides AI developers with workflows and infrastructure to build and deploy AI-native applications faster.
+
+<div className="not-prose mb-16 mt-6 flex gap-3">
+  <Button href="https://deployplex.com" arrow="right" children="Join the waitlist" />
+  <Button href="/cli/getting-started" variant="outline" children="DeployPlex CLI" />
+</div>
+
+## Before you begin
+
+To get started you’ll create a new project by either deploying a template or importing and deploying an existing project:
+
+<div className="not-prose">
+  <Button
+    href="https://deployplex.com"
+    variant="text"
+    arrow="right"
+    children="Join the waitlist"
+  />
+</div>
+
+<NextSteps />

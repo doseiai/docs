@@ -1,0 +1,27 @@
+export const metadata = {
+  title: 'dplex env',
+  description:
+    'Learn how to manage your env variables in your DeployPlex Projects using the dplex env CLI command.',
+}
+
+
+# dplex env
+Learn how to manage your env variables in your DeployPlex Projects using the dplex env CLI command.
+
+## dplex env list
+```bash
+dplex env list --owner <username>/<project_name>
+```
+Using this command you can list all environment variables in a Project.
+- `--owner` is required
+
+## dplex env set
+```bash
+dplex env set --file <env_file_path> --owner <username>/<project_name>
+```
+Using this command you can set all environment variables listed in the file to a project.
+
+### Options:
+- `--file` is not required, defaults to `.env`
+- `--owner` is required
+- `--yes` is not required, You can pass this option to bypass the confirmation prompt
