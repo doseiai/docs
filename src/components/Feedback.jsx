@@ -1,7 +1,9 @@
 'use client'
 
+import axios from "axios";
 import { forwardRef, Fragment, useState } from 'react'
 import { Transition } from '@headlessui/react'
+import { usePathname } from "next/navigation";
 
 function CheckIcon(props) {
   return (
@@ -62,15 +64,18 @@ const FeedbackThanks = forwardRef(function FeedbackThanks(_props, ref) {
 })
 
 export function Feedback() {
-  let [submitted, setSubmitted] = useState(false)
+  const pathname = usePathname();
+  let [submitted, setSubmitted] = useState(false);
 
   function onSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    // event.nativeEvent.submitter.dataset.response
-    // => "yes" or "no"
+    axios.post(`${process.env.NEXT_PUBLIC_API_BASE_URL}/docs/feedback`, {
+      answer: event.nativeEvent.submitter.dataset.response,
+      path: pathname
+    });
 
-    setSubmitted(true)
+    setSubmitted(true);
   }
 
   return (
