@@ -211,6 +211,7 @@ export const navigation = [
       { title: 'login', href: '/cli/login' },
       { title: 'logout', href: '/cli/logout' },
       { title: 'project', href: '/cli/project' },
+      { title: 'logs', href: '/cli/logs' },
       { title: 'env', href: '/cli/env' },
     ],
   },
