@@ -1,0 +1,48 @@
+export const metadata = {
+  title: "DeployPlex's Chroma",
+  description:
+    'Learn the benefits and how to use DeployPlex Chroma',
+}
+
+# Storage - Chroma
+DeployPlex's managed [Chroma](https://www.trychroma.com/) simplifies the management of your embeddings database through zero-config.
+
+## What's included
+- One-click deployment
+- Out-of-the-box auto-scaling
+- Private networking with your app for extremely low latency
+- Automatic backups
+- One-click version upgrades
+
+
+## Getting started
+Create a new Chroma database from [DeployPlex storage](https://deployplex.com/storage), select new VectorDB,
+choose a new, and you are up and running in less than 5 seconds!
+
+## Connecting
+
+When you create your Chroma database, you will be prompted to the database overview.
+There you will see your `username` and `password` which you can use as follows with the chroma sdk:
+```python
+user_password_base64 = string_to_base64(f"{os.getenv('CHROMA_SERVER_USERNAME')}:{os.getenv('CHROMA_SERVER_PASSWORD')}")
+
+chroma_client = chromadb.HttpClient(
+    host=os.getenv('CHROMA_SERVER_HOST'),
+    ssl=True,
+    headers={
+        "Authorization": f"Basic {user_password_base64}"
+    }
+)
+```
+Alternatively you can use [this template](https://github.com/deployplex/deployplex/tree/main/examples/ai-native-api) to get started, if you don't know where to start.
+
+### Connecting privately over Private Networking (recommended for production deployments)
+
+When you link your chroma database with one of your projects the following enviroment variables will be populated
+by default.
+- `CHROMA_SERVER_USERNAME`
+- `CHROMA_SERVER_PASSWORD`
+- `CHROMA_SERVER_HOST`
+
+By using these variables you will be able to connect through our private network for extremely low latency and keeping
+your data on a safe environment.

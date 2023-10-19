@@ -198,12 +198,12 @@ export const navigation = [
       { title: 'Getting started', href: '/' },
     ],
   },
-  // {
-  //   title: 'Storage',
-  //   links: [
-  //     { title: 'Getting started', href: '/storage/getting-started' },
-  //   ],
-  // },
+  {
+    title: 'Storage - Chroma',
+    links: [
+      { title: 'Getting started', href: '/chroma' },
+    ],
+  },
   {
     title: 'CLI',
     links: [
