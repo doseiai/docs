@@ -196,6 +196,7 @@ export const navigation = [
     title: 'Platform',
     links: [
       { title: 'Getting started', href: '/' },
+      { title: 'Cron Jobs', href: '/cron-jobs' },
     ],
   },
   {
