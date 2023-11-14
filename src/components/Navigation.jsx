@@ -11,6 +11,7 @@ import { useIsInsideMobileNavigation } from '@/components/MobileNavigation'
 import { useSectionStore } from '@/components/SectionProvider'
 import { Tag } from '@/components/Tag'
 import { remToPx } from '@/lib/remToPx'
+import {ArrowTopRightOnSquareIcon} from "@heroicons/react/20/solid";
 
 function useInitialValue(value, condition = true) {
   let initialValue = useRef(value).current
@@ -32,6 +33,7 @@ function TopLevelNavItem({ href, children }) {
 
 function NavLink({
   href,
+  target,
   children,
   tag,
   active = false,
@@ -40,6 +42,7 @@ function NavLink({
   return (
     <Link
       href={href}
+      target={target}
       aria-current={active ? 'page' : undefined}
       className={clsx(
         'flex justify-between gap-2 py-1 pr-3 text-sm transition',
@@ -49,7 +52,13 @@ function NavLink({
           : 'text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white',
       )}
     >
-      <span className="truncate">{children}</span>
+      {
+        target === "_blank" ?
+        <span className="truncate flex items-center">
+          {children} <ArrowTopRightOnSquareIcon className="ml-2 h-4 w-4" aria-hidden="true" />
+        </span> :
+          <span className="truncate">{children}</span>
+      }
       {tag && (
         <Tag variant="small" color="zinc">
           {tag}
@@ -152,7 +161,7 @@ function NavigationGroup({ group, className }) {
         <ul role="list" className="border-l border-transparent">
           {group.links.map((link) => (
             <motion.li key={link.href} layout="position" className="relative">
-              <NavLink href={link.href} active={link.href === pathname}>
+              <NavLink href={link.href} target={link.target} active={link.href === pathname}>
                 {link.title}
               </NavLink>
               <AnimatePresence mode="popLayout" initial={false}>
@@ -196,6 +205,7 @@ export const navigation = [
     title: 'Platform',
     links: [
       { title: 'Getting started', href: '/' },
+      { title: 'Cron Jobs', href: '/cron-jobs' },
     ],
   },
   {
@@ -213,6 +223,14 @@ export const navigation = [
       { title: 'project', href: '/cli/project' },
       { title: 'logs', href: '/cli/logs' },
       { title: 'env', href: '/cli/env' },
+    ],
+  },
+  {
+    title: 'Resources',
+    links: [
+      { title: 'Github Examples', href: 'https://github.com/deployplex/deployplex/tree/main/examples', target: '_blank' },
+      { title: 'API Reference', href: 'https://api.deployplex.com/docs', target: '_blank' },
+      { title: 'API Status', href: 'https://deployplex.instatus.com', target: '_blank' },
     ],
   },
 ]
