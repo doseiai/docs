@@ -228,9 +228,9 @@ export const navigation = [
   {
     title: 'Resources',
     links: [
-      { title: 'Github Examples', href: 'https://github.com/deployplex/deployplex/tree/main/examples', target: '_blank' },
-      { title: 'API Reference', href: 'https://api.deployplex.com/docs', target: '_blank' },
-      { title: 'API Status', href: 'https://deployplex.instatus.com', target: '_blank' },
+      { title: 'Github Examples', href: 'https://github.com/doseiai/dosei/tree/main/examples', target: '_blank' },
+      { title: 'API Reference', href: 'https://api.dosei.ai/docs', target: '_blank' },
+      { title: 'API Status', href: 'https://dosei.instatus.com', target: '_blank' },
     ],
   },
 ]
@@ -249,7 +249,7 @@ export function Navigation(props) {
           />
         ))}
         <li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
-          <Button href="https://deployplex.com" variant="filled" className="w-full">
+          <Button href="https://dosei.ai" variant="filled" className="w-full">
             Join the waitlist
           </Button>
         </li>

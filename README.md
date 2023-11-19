@@ -1,11 +1,11 @@
-# DeployPlex Documentation
+# Dosei Documentation
 
 The infrastructure for developers working on the AI application layer.
 
 ## Documentation
 
-For details on how to use DeployPlex, check out our [documentation](https://deployplex.com/docs).
+For details on how to use Dosei, check out our [documentation](https://dosei.ai/docs).
 
 ## LICENSE
 
-DeployPlex Documentation is published under the [Apache-2.0](LICENSE)
+Dosei Documentation is published under the [Apache-2.0](LICENSE)

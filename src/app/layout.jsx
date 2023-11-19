@@ -8,8 +8,8 @@ import Head from "next/head";
 
 export const metadata = {
   title: {
-    template: '%s - DeployPlex Documentation',
-    default: 'DeployPlex Documentation',
+    template: '%s - Dosei Documentation',
+    default: 'Dosei Documentation',
   },
 }
 

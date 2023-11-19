@@ -105,10 +105,10 @@ function SmallPrint() {
         &copy; Copyright {new Date().getFullYear()}. All rights reserved.
       </p>
       <div className="flex gap-4">
-        <SocialLink href="https://x.com/deployplex" icon={TwitterIcon}>
+        <SocialLink href="https://x.com/dosei_ai" icon={TwitterIcon}>
           Follow us on X
         </SocialLink>
-        <SocialLink href="https://github.com/deployplex" icon={GitHubIcon}>
+        <SocialLink href="https://github.com/doseiai" icon={GitHubIcon}>
           Follow us on GitHub
         </SocialLink>
         <SocialLink href={process.env.NEXT_PUBLIC_DISCORD_INVITE} icon={DiscordIcon}>

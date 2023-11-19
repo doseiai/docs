@@ -1,13 +1,13 @@
 export const metadata = {
   title: "Cron Jobs",
   description:
-    'Learn the benefits and how to use DeployPlex Cron Jobs',
+    'Learn the benefits and how to use Dosei Cron Jobs',
 }
 
 # Cron Jobs
 Cron jobs are scheduled tasks in Unix-like operating systems. They are used to automate system maintenance or administration tasks, such as backups, system updates, or routine data processing.
 
-DeployPlex offers an opinionated approach to its use in REST APIs for ease of use. Here, you can learn how to get started with DeployPlex Cron Jobs.
+Dosei offers an opinionated approach to its use in REST APIs for ease of use. Here, you can learn how to get started with Dosei Cron Jobs.
 
 ## Getting started
 Create a new `cron_jobs.json` on your project root directory.
@@ -23,19 +23,19 @@ Is this example we are creating a schedule call to path `/` every 24 hours in th
 Checkout [crontab.guru](https://crontab.guru/#0_0_*_*_*) to find other syntax formats.
 
 ## Securing cron jobs
-When you define `cron_jobs.json` your project on will create new `DEPLOYPLEX_CRON_SECRET` env variable which will be rotated every new deployment.
+When you define `cron_jobs.json` your project on will create new `DOSEI_CRON_SECRET` env variable which will be rotated every new deployment.
 
-**Install DeployPlex SDK**
+**Install Dosei SDK**
 <CodeGroup>
 
   ```bash {{ title: 'pip' }}
-  # Install the DeployPlex Python SDK
-  pip install deployplex
+  # Install the Dosei Python SDK
+  pip install dosei
   ```
 
   ```bash {{ title: 'poetry' }}
-  # Install the DeployPlex Python SDK
-  poetry add deployplex
+  # Install the Dosei Python SDK
+  poetry add dosei
   ```
 
 </CodeGroup>
@@ -43,7 +43,7 @@ When you define `cron_jobs.json` your project on will create new `DEPLOYPLEX_CRO
 **Add this middleware to your endpoint**
 <CodeGroup>
   ```python {{ title: 'FastAPI' }}
-  from deployplex.integrations.fastapi import cron_job_auth
+  from dosei.integrations.fastapi import cron_job_auth
 
   @app.post("/")
   def root(auth: None = Depends(cron_job_auth)) -> Response:
