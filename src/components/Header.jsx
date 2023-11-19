@@ -63,7 +63,7 @@ export const Header = forwardRef(function Header({ className }, ref) {
       <div className="flex items-center gap-5 lg:hidden">
         <MobileNavigation />
         <Link href="/" aria-label="Home">
-          <Logo className="h-6" />
+          <Logo className="h-5" />
         </Link>
       </div>
       <div className="flex items-center gap-5">
@@ -79,7 +79,7 @@ export const Header = forwardRef(function Header({ className }, ref) {
           <ThemeToggle />
         </div>
         <div className="hidden min-[416px]:contents">
-          <Button href="https://deployplex.com">Join the waitlist</Button>
+          <Button href="https://dosei.ai">Join the waitlist</Button>
         </div>
       </div>
     </motion.div>

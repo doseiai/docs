@@ -12,7 +12,7 @@ import { UsersIcon } from '@/components/icons/UsersIcon'
 
 const nextSteps = [
   {
-    href: 'https://deployplex.com/new',
+    href: 'https://dosei.ai/new',
     name: 'Start with a template',
     description:
       'Choose one of our batteries included templates to get started.',
@@ -26,7 +26,7 @@ const nextSteps = [
     },
   },
   {
-    href: 'https://deployplex.com/new',
+    href: 'https://dosei.ai/new',
     name: 'Import Git Repository',
     description:
       'Import an existing Git repository and get production-ready infrastructure for your AI-native app.',
