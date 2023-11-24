@@ -7,25 +7,15 @@ export const metadata = {
 # Cron Jobs
 Cron jobs are scheduled tasks in Unix-like operating systems. They are used to automate system maintenance or administration tasks, such as backups, system updates, or routine data processing.
 
-Dosei offers an opinionated approach to its use in REST APIs for ease of use. Here, you can learn how to get started with Dosei Cron Jobs.
+Dosei offers an opinionated approach to its use in Infrastructure as Code (IaC) for ease of use. Here, you can learn how to get started with Dosei Cron Jobs.
+
+Dosei Cron Jobs follow the same lifecycle of your project with versions following your git history, just like in your regular application source code, you can easil rollback a cron job.
+
+Dosei Cron Jobs use the same environment variables define in your project.
 
 ## Getting started
-Create a new `cron_jobs.json` on your project root directory.
-```json
-[
-  {
-    "schedule": "0 0 * * *",
-    "path": "/"
-  }
-]
-```
-Is this example we are creating a schedule call to path `/` every 24 hours in the middle of the night.
-Checkout [crontab.guru](https://crontab.guru/#0_0_*_*_*) to find other syntax formats.
 
-## Securing cron jobs
-When you define `cron_jobs.json` your project on will create new `DOSEI_CRON_SECRET` env variable which will be rotated every new deployment.
-
-**Install Dosei SDK**
+1. Install the **Dosei SDK** in your project if you haven't already.
 <CodeGroup>
 
   ```bash {{ title: 'pip' }}
@@ -40,13 +30,25 @@ When you define `cron_jobs.json` your project on will create new `DOSEI_CRON_SEC
 
 </CodeGroup>
 
-**Add this middleware to your endpoint**
-<CodeGroup>
-  ```python {{ title: 'FastAPI' }}
-  from dosei.integrations.fastapi import cron_job_auth
+2. Add A CronJob function to your `dosei` app
 
-  @app.post("/")
-  def root(auth: None = Depends(cron_job_auth)) -> Response:
-  return Response()
-  ```
-</CodeGroup>
+```python
+from dosei import Dosei
+
+dosei = Dosei()
+
+@dosei.cron_job("0 0 * * *")
+def hello_world():
+    print("hello world!")
+```
+
+Now next time you rollout a new deployment, your new define cron jobs will be displayed under the Cron Jobs
+tab in your project page.
+
+### Running Cron Jobs locally
+You can also run the cron jobs locally, simply run on your terminal
+
+```bash
+#         module:func_name
+dosei run hello_world.main:hello_world
+```
