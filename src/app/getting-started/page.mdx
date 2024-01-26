@@ -1,5 +1,3 @@
-import { Button } from '@/components/Button'
-
 export const metadata = {
   title: 'Install Dosei',
   description: 'Install Dosei on Linux, macOS, and Windows',
@@ -8,37 +6,19 @@ export const metadata = {
 
 # Install Dosei
 
-Learn how to install Dosei.
+This is an installation guide. You'll learn how to install, run, and experiment with Dosei.
 
 While you can install Dosei following this guide, you might also consider using [Dosei Cloud](https://dosei.ai) by creating a free account.
 
-## Using Docker Compose
+## Install Dosei
 
+How you install Dosei depends on your operating system and whether your prefer installation method.
+See the guide below that best fits your needs:
 
-To obtain the source files for the latest stable version of Dosei, run:
+* [Install Dosei from Source](./getting-started/source-code)
+* [Install Dosei on Linux or macOS](./getting-started/linux-macos)
+* [Run Dosei on Docker](./getting-started/docker)
 
-```bash
-curl \
-  --fail \
-  --location \
-  --progress-bar \
-  --output dosei.zip \
-  https://github.com/doseiai/engine/archive/refs/tags/0.0.9.zip
-```
-
-To install the Dosei Daemon, run the following commands:
-
-```bash
-unzip dosei.zip
-cd engine-0.0.9
-make install
-```
-
-Running Dosei with docker compose
-
-```bash
-docker compose -f docker-compose.hobby.yaml up
-```
 
 ### The Dosei CLI
 

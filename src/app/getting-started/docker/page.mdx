@@ -1,0 +1,33 @@
+export const metadata = {
+  title: 'Run Dosei on Docker',
+  description: 'How to install Dosei using Docker',
+}
+
+# Run Dosei on Docker
+
+To obtain the source files for the latest stable version of Dosei, run:
+
+```bash
+curl \
+  --fail \
+  --location \
+  --progress-bar \
+  --output dosei.zip \
+  https://github.com/doseiai/engine/archive/refs/tags/0.0.9.zip
+```
+
+To install the Dosei Daemon, run the following commands:
+
+```bash
+unzip dosei.zip
+cd engine-0.0.9
+make install
+```
+
+Running Dosei with docker compose
+
+```bash
+docker compose -f docker-compose.hobby.yaml up
+```
+
+For a more complete installation, continue with [these instructions](/getting-started).
