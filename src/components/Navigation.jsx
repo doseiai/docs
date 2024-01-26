@@ -202,10 +202,15 @@ function NavigationGroup({ group, className }) {
 
 export const navigation = [
   {
-    title: 'Platform',
+    title: 'About',
     links: [
-      { title: 'Getting started', href: '/' },
-      { title: 'Cron Jobs', href: '/cron-jobs' },
+      { title: 'Introduction', href: '/' },
+    ],
+  },
+  {
+    title: 'Getting started',
+    links: [
+      { title: 'Install', href: '/getting-started' },
     ],
   },
   {

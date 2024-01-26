@@ -5,10 +5,23 @@ import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 
 import { GridPattern } from '@/components/GridPattern'
 import { Heading } from '@/components/Heading'
-import { ChatBubbleIcon } from '@/components/icons/ChatBubbleIcon'
-import { EnvelopeIcon } from '@/components/icons/EnvelopeIcon'
 import { UserIcon } from '@/components/icons/UserIcon'
 import { UsersIcon } from '@/components/icons/UsersIcon'
+import {DiscordIcon} from "@/components/Footer";
+
+const discord = {
+  href: 'https://discord.com/invite/BP5aUkhcAh',
+  name: "Join the community",
+  description: "If you have questions about Dosei, reach out to DOsei community members and developers on our Discord Server.",
+  icon: DiscordIcon,
+  pattern: {
+    y: 16,
+    squares: [
+      [0, 1],
+      [1, 3],
+    ],
+  },
+}
 
 const nextSteps = [
   {
@@ -132,6 +145,16 @@ export function NextSteps() {
         {nextSteps.map((resource) => (
           <Resource key={resource.href} resource={resource} />
         ))}
+      </div>
+    </div>
+  )
+}
+
+export function Discord() {
+  return (
+    <div className="my-16 xl:max-w-none">
+      <div className="not-prose mt-4 grid grid-cols-1 gap-8 border-t border-zinc-900/5 pt-10 dark:border-white/5 sm:grid-cols-1 xl:grid-cols-1  ">
+        <Resource key={discord.href} resource={discord} />
       </div>
     </div>
   )

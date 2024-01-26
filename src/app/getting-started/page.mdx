@@ -1,0 +1,75 @@
+import { Button } from '@/components/Button'
+
+export const metadata = {
+  title: 'Install Dosei',
+  description: 'Install Dosei on Linux, macOS, and Windows',
+}
+
+
+# Install Dosei
+
+Learn how to install Dosei.
+
+While you can install Dosei following this guide, you might also consider using [Dosei Cloud](https://dosei.ai) by creating a free account.
+
+## Using Docker Compose
+
+
+To obtain the source files for the latest stable version of Dosei, run:
+
+```bash
+curl \
+  --fail \
+  --location \
+  --progress-bar \
+  --output dosei.zip \
+  https://github.com/doseiai/engine/archive/refs/tags/0.0.9.zip
+```
+
+To install the Dosei Daemon, run the following commands:
+
+```bash
+unzip dosei.zip
+cd engine-0.0.9
+make install
+```
+
+Running Dosei with docker compose
+
+```bash
+docker compose -f docker-compose.hobby.yaml up
+```
+
+### The Dosei CLI
+
+After you have Dosei up and running, you can connect using `dctl`.
+
+External apps talk to Dosei using a TCP socket and Dosei specific protocol. This protocol is implemented in Dosei
+sdks for the different programming languages.
+However, to make hacking with Dosei simpler, Dosei provides a command line utility that can be used to send commands to Dosei.
+This program is called `dctl`.
+
+To install and configure `dctl` follow this two-step guide [Dosei CLI Getting started](./cli) guide.
+
+
+### Test if you can connect using the CLI
+
+The first thing to do to check if Dosei is working properly is sending a `info` command using `dctl`:
+
+```bash
+$ dctl info
+{
+  "server": {
+    "id": "e741ab13-346d-4215-9472-041f9085876d",
+    "mode": "STANDALONE",
+    "address": {
+      "host": "127.0.0.1",
+      "port": 8844
+    },
+    "version": "0.0.9",
+    "integration": {
+      "github": null
+    }
+  }
+}
+```

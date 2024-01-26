@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
 import { HeroPattern } from '@/components/HeroPattern'
-import { NextSteps } from '@/components/NextSteps'
+import {Discord, NextSteps} from '@/components/NextSteps'
 
 export const metadata = {
   title: 'Dosei Documentation',
@@ -8,32 +8,29 @@ export const metadata = {
     'Learn everything there is to know about Dosei.',
 }
 
-export const sections = [
-  { title: 'Before you begin', id: 'before-you-begin' },
-    { title: 'Next steps', id: 'next-steps' },
-]
+[//]: # (export const sections = [)
+
+[//]: # (  { title: 'Before you begin', id: 'before-you-begin' },)
+
+[//]: # (    { title: 'Next steps', id: 'next-steps' },)
+
+[//]: # (])
 
 <HeroPattern />
 
-# Dosei Documentation
-Dosei provides AI developers with workflows and infrastructure to build and deploy AI-native applications faster.
+# Introduction to Dosei
+
+Dosei is an [open source](https://github.com/doseiai/engine) developer platform for creating, deploying, and managing containerized applications.
+
 
 <div className="not-prose mb-16 mt-6 flex gap-3">
-  <Button href="https://dosei.ai" arrow="right" children="Join the waitlist" />
-  <Button href="/cli" variant="outline" children="Dosei CLI" />
+  <Button href="/getting-started" arrow="right" children="Getting started" />
 </div>
 
-## Before you begin
+## License
 
-To get started you’ll create a new project by either deploying a template or importing and deploying an existing project:
+Dosei is an open-source project under the [Apache-2.0 license](https://github.com/doseiai/engine?tab=readme-ov-file).
 
-<div className="not-prose">
-  <Button
-    href="https://dosei.ai"
-    variant="text"
-    arrow="right"
-    children="Join the waitlist"
-  />
-</div>
+<Discord />
 
-<NextSteps />
+
