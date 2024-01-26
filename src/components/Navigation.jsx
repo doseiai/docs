@@ -214,12 +214,6 @@ export const navigation = [
     ],
   },
   {
-    title: 'Storage - Chroma',
-    links: [
-      { title: 'Getting started', href: '/chroma' },
-    ],
-  },
-  {
     title: 'CLI',
     links: [
       { title: 'Getting started', href: '/cli' },
@@ -228,6 +222,12 @@ export const navigation = [
       { title: 'project', href: '/cli/project' },
       { title: 'logs', href: '/cli/logs' },
       { title: 'env', href: '/cli/env' },
+    ],
+  },
+  {
+    title: 'Storage - Chroma',
+    links: [
+      { title: 'Getting started', href: '/chroma' },
     ],
   },
   {
