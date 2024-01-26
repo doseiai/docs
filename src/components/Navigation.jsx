@@ -244,7 +244,6 @@ export function Navigation(props) {
   return (
     <nav {...props}>
       <ul role="list">
-        <TopLevelNavItem href="/">Documentation</TopLevelNavItem>
         <TopLevelNavItem target="_blank" href="https://calendly.com/am--osu/30min">Talk to the Founder</TopLevelNavItem>
         {navigation.map((group, groupIndex) => (
           <NavigationGroup
@@ -253,11 +252,6 @@ export function Navigation(props) {
             className={groupIndex === 0 ? 'md:mt-0' : ''}
           />
         ))}
-        <li className="sticky bottom-0 z-10 mt-6 min-[416px]:hidden">
-          <Button href="https://dosei.ai" variant="filled" className="w-full">
-            Join the waitlist
-          </Button>
-        </li>
       </ul>
     </nav>
   )

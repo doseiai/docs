@@ -69,7 +69,6 @@ export const Header = forwardRef(function Header({ className }, ref) {
       <div className="flex items-center gap-5">
         <nav className="hidden md:block">
           <ul role="list" className="flex items-center gap-8">
-            <TopLevelNavItem href="/">Documentation</TopLevelNavItem>
             <TopLevelNavItem target="_blank" href="https://calendly.com/am--osu/30min">Talk to the Founder</TopLevelNavItem>
           </ul>
         </nav>
@@ -77,9 +76,6 @@ export const Header = forwardRef(function Header({ className }, ref) {
         <div className="flex gap-4">
           <MobileSearch />
           <ThemeToggle />
-        </div>
-        <div className="hidden min-[416px]:contents">
-          <Button href="https://dosei.ai">Join the waitlist</Button>
         </div>
       </div>
     </motion.div>
