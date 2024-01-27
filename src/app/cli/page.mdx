@@ -10,14 +10,34 @@ export const metadata = {
 # Dosei CLI
 Learn how to use `dctl` the Dosei command-line interface (CLI) to manage and configure your Dosei Projects from the command line.
 
-You can install and configure `dctl` using this command:
 
-Shell (Mac, Linux):
+**macOS**
+
+If you have the [Homebrew](https://brew.sh) package manager installed, `dctl` can be installed by running:
+
+```bash
+brew tap doseiai/tap
+brew install dctl
+```
+
+If not, you can run the install script:
+
 ```bash
 curl -fsSL https://dosei.ai/install.sh | sh
 ```
 
-PowerShell (Windows):
+**Linux**
+
+From the terminal, run:
+
+```bash
+curl -fsSL https://dosei.ai/install.sh | sh
+```
+
+**Windows**
+
+From powershell, run:
+
 ```powershell
 irm https://dosei.ai/install.ps1 | iex
 ```
