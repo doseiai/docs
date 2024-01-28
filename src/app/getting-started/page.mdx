@@ -20,14 +20,14 @@ curl \
   --location \
   --progress-bar \
   --output dosei.zip \
-  https://github.com/doseiai/engine/archive/refs/tags/0.0.10.zip
+  https://github.com/doseiai/engine/archive/refs/heads/main.zip
 ```
 
 To install the Configure Dosei with Docker Compose, run the following commands:
 
 ```bash
 unzip dosei.zip
-cd engine-0.0.10
+cd engine-main
 make configure-compose
 ```
 
@@ -62,13 +62,13 @@ The first thing to do to check if Dosei is working properly is sending a `info` 
 $ dctl info
 {
   "server": {
-    "id": "e741ab13-346d-4215-9472-041f9085876d",
+    "id": ...,
     "mode": "STANDALONE",
     "address": {
       "host": "127.0.0.1",
       "port": 8844
     },
-    "version": "0.0.9",
+    "version": ...,
     "integration": {
       "github": null
     }
