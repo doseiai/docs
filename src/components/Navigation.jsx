@@ -211,6 +211,9 @@ export const navigation = [
     title: 'Getting started',
     links: [
       { title: 'Install', href: '/getting-started' },
+      // { title: 'Docker', href: '/getting-started/docker-compose' },
+      // { title: 'Linux, macOS', href: '/getting-started/linux-macos  ' },
+      // { title: 'Source code', href: '/getting-started/source-code' },
     ],
   },
   {
