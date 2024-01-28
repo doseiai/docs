@@ -10,15 +10,32 @@ This is an installation guide. You'll learn how to install, run, and experiment 
 
 While you can install Dosei following this guide, you might also consider using [Dosei Cloud](https://dosei.ai) by creating a free account.
 
-## Install Dosei
+## Docker Compose setup
 
-How you install Dosei depends on your operating system and whether your prefer installation method.
-See the guide below that best fits your needs:
+To obtain the source files for the latest stable version of Dosei, run:
 
-* [Install Dosei from Source](./getting-started/source-code)
-* [Install Dosei on Linux or macOS](./getting-started/linux-macos)
-* [Run Dosei on Docker](./getting-started/docker)
+```bash
+curl \
+  --fail \
+  --location \
+  --progress-bar \
+  --output dosei.zip \
+  https://github.com/doseiai/engine/archive/refs/tags/0.0.10.zip
+```
 
+To install the Configure Dosei with Docker Compose, run the following commands:
+
+```bash
+unzip dosei.zip
+cd engine-0.0.10
+make configure-compose
+```
+
+Running Dosei with docker compose
+
+```bash
+docker compose up
+```
 
 ### The Dosei CLI
 
@@ -31,6 +48,11 @@ This program is called `dctl`.
 
 To install and configure `dctl` follow this two-step guide [Dosei CLI Getting started](./cli) guide.
 
+Alternatively if you prefer not to install `dctl` locally, you can run it from the Docker container:
+
+```bash
+docker exec -it dosei dctl
+```
 
 ### Test if you can connect using the CLI
 
