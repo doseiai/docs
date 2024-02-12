@@ -28,19 +28,43 @@ Dosei Cron Jobs use the same environment variables define in your project.
   poetry add dosei-sdk
   ```
 
+  ```bash {{ title: 'npm' }}
+  # Install the Dosei JavaScript SDK
+  npm install @dosei/dosei
+  ```
+
+  ```bash {{ title: 'yarn' }}
+  # Install the Dosei JavaScript SDK
+  yarn add @dosei/dosei
+  ```
+
 </CodeGroup>
 
 2. Add A CronJob function to your `dosei` app
 
-```python
-from dosei_sdk import Dosei
+<CodeGroup>
 
-dosei = Dosei()
+  ```python {{ title: 'python' }}
+  from dosei_sdk import Dosei
 
-@dosei.cron_job("0 0 * * *")
-def hello_world():
-    print("hello world!")
-```
+  dosei = Dosei()
+
+  @dosei.cron_job("0 0 * * *")
+  def hello_world():
+  print("hello world!")
+  ```
+
+  ```javascript {{ title: 'node' }}
+  import { Dosei } from "dosei";
+
+  const dosei = new Dosei();
+
+  dosei.cron_job("* * * * *", async () => {
+    console.log("Hello world!");
+  });
+  ```
+
+</CodeGroup>
 
 Now next time you roll out a new deployment, your new define cron jobs will be displayed under the Cron Jobs
 tab in your project page.
