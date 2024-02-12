@@ -20,12 +20,12 @@ Dosei Cron Jobs use the same environment variables define in your project.
 
   ```bash {{ title: 'pip' }}
   # Install the Dosei Python SDK
-  pip install dosei
+  pip install dosei-sdk
   ```
 
   ```bash {{ title: 'poetry' }}
   # Install the Dosei Python SDK
-  poetry add dosei
+  poetry add dosei-sdk
   ```
 
 </CodeGroup>
@@ -33,7 +33,7 @@ Dosei Cron Jobs use the same environment variables define in your project.
 2. Add A CronJob function to your `dosei` app
 
 ```python
-from dosei import Dosei
+from dosei_sdk import Dosei
 
 dosei = Dosei()
 
@@ -42,7 +42,7 @@ def hello_world():
     print("hello world!")
 ```
 
-Now next time you rollout a new deployment, your new define cron jobs will be displayed under the Cron Jobs
+Now next time you roll out a new deployment, your new define cron jobs will be displayed under the Cron Jobs
 tab in your project page.
 
 ### Running Cron Jobs locally
@@ -50,7 +50,7 @@ You can also run the cron jobs locally, simply run on your terminal
 
 ```bash
 #         module:func_name
-dosei run hello_world.main:hello_world
+dctl run hello_world.main:hello_world
 ```
 
 ## Pricing
