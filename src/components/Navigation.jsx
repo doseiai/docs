@@ -236,7 +236,7 @@ export const navigation = [
   {
     title: 'Resources',
     links: [
-      { title: 'Github Examples', href: 'https://github.com/doseiai/dosei/tree/main/examples', target: '_blank' },
+      { title: 'Github Examples', href: 'https://github.com/doseiai/examples/tree/main/examples', target: '_blank' },
       { title: 'API Reference', href: 'https://api.dosei.ai/docs', target: '_blank' },
       { title: 'API Status', href: 'https://dosei.instatus.com', target: '_blank' },
     ],
