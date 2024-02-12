@@ -228,9 +228,10 @@ export const navigation = [
     ],
   },
   {
-    title: 'Storage - Chroma',
+    title: 'Infrastructure',
     links: [
-      { title: 'Getting started', href: '/chroma' },
+      { title: 'Cron Jobs', href: '/cron-jobs' },
+      { title: 'Storage - Chroma', href: '/chroma' },
     ],
   },
   {
