@@ -219,19 +219,19 @@ export const navigation = [
   {
     title: 'CLI',
     links: [
-      { title: 'Getting started', href: '/docs/cli' },
-      { title: 'login', href: '/docs/cli/login' },
-      { title: 'logout', href: '/docs/cli/logout' },
-      { title: 'project', href: '/docs/cli/project' },
-      { title: 'logs', href: '/docs/cli/logs' },
-      { title: 'env', href: '/docs/cli/env' },
+      { title: 'Getting started', href: '/cli' },
+      { title: 'login', href: '/cli/login' },
+      { title: 'logout', href: '/cli/logout' },
+      { title: 'project', href: '/cli/project' },
+      { title: 'logs', href: '/cli/logs' },
+      { title: 'env', href: '/cli/env' },
     ],
   },
   {
     title: 'Infrastructure',
     links: [
-      { title: 'Cron Jobs', href: '/docs/cron-jobs' },
-      { title: 'Storage - Chroma', href: '/docs/chroma' },
+      { title: 'Cron Jobs', href: '/cron-jobs' },
+      { title: 'Storage - Chroma', href: '/chroma' },
     ],
   },
   {

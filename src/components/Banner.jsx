@@ -21,7 +21,7 @@ export default function Banner() {
           </p>
           <div className="flex items-center justify-center -mt-1 -mb-2.5">
             <GitHubButton
-              href="https://github.com/doseiai/dosei"
+              href="https://github.com/doseiai/engine"
               data-show-count="true"
               data-size="large"
               aria-label="Star doseiai/engine on GitHub">

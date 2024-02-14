@@ -28,7 +28,7 @@ function useAutocomplete({ close }) {
       return
     }
 
-    router.push(`/docs/${itemUrl}`)
+    router.push(itemUrl)
 
     if (
       itemUrl ===
