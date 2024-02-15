@@ -4,13 +4,13 @@ export function Logo(props) {
   return (
     <>
       <img
-        src="/logo.svg"
+        src="/docs/logo.svg"
         alt="Dosei logo"
         {...props}
         className={clsx(props.className, "block dark:hidden")}
       />
       <img
-        src="/logo-white.svg"
+        src="/docs/logo-white.svg"
         alt="Dosei logo"
         {...props}
         className={clsx(props.className, "hidden dark:block")}
