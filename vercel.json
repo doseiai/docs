@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "docs.dosei.ai"
+        }
+      ],
+      "destination": "https://dosei.ai/docs"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "docs.dosei.ai"
+        }
+      ],
+      "destination": "https://dosei.ai/docs/:path*"
+    }
+  ]
+}
