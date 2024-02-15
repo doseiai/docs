@@ -17,16 +17,16 @@ const withMDX = nextMDX({
 const nextConfig = {
   basePath: '/docs',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: '/',
-  //       destination: '/docs',
-  //       permanent: false,
-  //       basePath: false,
-  //     },
-  //   ]
-  // },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/docs',
+        permanent: false,
+        basePath: false,
+      },
+    ]
+  },
 }
 
 export default withSearch(withMDX(nextConfig))
