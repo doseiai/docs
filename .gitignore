@@ -37,3 +37,6 @@ next-env.d.ts
 # build output
 public/robots.txt
 public/sitemap*
+
+# IntelliJ
+.idea
