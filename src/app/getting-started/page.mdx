@@ -39,27 +39,27 @@ docker compose up
 
 ## The Dosei CLI
 
-After you have Dosei up and running, you can connect using `dctl`.
+After you have Dosei up and running, you can connect using `dosei`.
 
 External apps talk to Dosei using a TCP socket and Dosei specific protocol. This protocol is implemented in Dosei
 sdks for the different programming languages.
 However, to make hacking with Dosei simpler, Dosei provides a command line utility that can be used to send commands to Dosei.
-This program is called `dctl`.
+This program is called `dosei`.
 
-To install and configure `dctl` follow this two-step guide [Dosei CLI Getting started](./cli) guide.
+To install and configure `dosei` follow this two-step guide [Dosei CLI Getting started](./cli) guide.
 
-Alternatively if you prefer not to install `dctl` locally, you can run it from the Docker container:
+Alternatively if you prefer not to install `dosei` locally, you can run it from the Docker container:
 
 ```bash
-docker exec -it dosei dctl
+docker exec -it dosei dosei
 ```
 
 ## Test if you can connect using the CLI
 
-The first thing to do to check if Dosei is working properly is sending a `info` command using `dctl`:
+The first thing to do to check if Dosei is working properly is sending a `info` command using `dosei`:
 
 ```bash
-$ dctl info
+$ dosei info
 {
   "server": {
     "id": ...,
