@@ -10,31 +10,15 @@ This is an installation guide. You'll learn how to install, run, and experiment 
 
 While you can install Dosei following this guide, you might also consider using [Dosei Cloud](https://dosei.ai) by creating a free account.
 
-## Docker Compose setup
+## Docker setup
 
-To obtain the source files for the latest stable version of Dosei, run:
-
-```bash
-curl \
-  --fail \
-  --location \
-  --progress-bar \
-  --output dosei.zip \
-  https://github.com/doseiai/engine/archive/refs/heads/main.zip
-```
-
-To install the Configure Dosei with Docker Compose, run the following commands:
+Running Dosei with docker
 
 ```bash
-unzip dosei.zip
-cd engine-main
-make configure-compose
-```
-
-Running Dosei with docker compose
-
-```bash
-docker compose up
+docker run \
+  -d --name dosei \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  doseiai/dosei
 ```
 
 ## The Dosei CLI
